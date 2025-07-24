@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Work - Umi Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen font-sans text-gray-900">
+  <div class="flex flex-col items-center justify-center min-h-screen fade-in">
+    <div class="bg-white bg-opacity-90 rounded-2xl shadow-xl p-8 w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-6 text-center">Admin: Add New Work</h1>
+      <div id="password-section">
+        <input id="password-input" type="password" placeholder="Enter password"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none mb-4" />
+        <button id="password-btn"
+          class="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Unlock</button>
+        <a href="works.html" class="mb-6 text-blue-500 hover:text-blue-700 underline text-sm self-start">&larr; Back to
+          All Works</a>
+        <p id="password-error" class="text-red-500 text-sm mt-2 hidden">Incorrect password. Try again.</p>
+      </div>
+      <form id="add-form" class="space-y-6 hidden">
+        <input id="image-url" type="url" placeholder="Image URL"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+          required />
+        <button type="submit"
+          class="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">Add
+          Image</button>
+          <a href="works.html" class="mb-6 text-blue-500 hover:text-blue-700 underline text-sm self-start">&larr; Back to
+
+        <p id="success-msg" class="text-green-600 text-center mt-2 hidden">Image added successfully!</p>
+      </form>
+    </div>
+  </div>
+  <script src="works_db.js"></script>
+  <script>
+    const url_section = 'designer2024';
+    const passwordSection = document.getElementById('password-section');
+    const addForm = document.getElementById('add-form');
+    const passwordInput = document.getElementById('password-input');
+    const passwordBtn = document.getElementById('password-btn');
+    const passwordError = document.getElementById('password-error');
+    const successMsg = document.getElementById('success-msg');
+
+    passwordBtn.onclick = function (e) {
+      e.preventDefault();
+      if (passwordInput.value === url_section) {
+        passwordSection.classList.add('hidden');
+        addForm.classList.remove('hidden');
+      } else {
+        passwordError.classList.remove('hidden');
+      }
+    };
+
+    addForm.onsubmit = function (e) {
+      e.preventDefault();
+      const url = document.getElementById('image-url').value;
+      window.umiWorksDB.addImage(url);
+      addForm.reset();
+      successMsg.classList.remove('hidden');
+      setTimeout(() => successMsg.classList.add('hidden'), 2000);
+    };
+  </script>
+</body>
+
+</html>

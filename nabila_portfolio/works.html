@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Works - Umi Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" />
+    <style>
+      .fade-in {
+        animation: fadeIn 1.2s ease-in;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen font-sans text-gray-900">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-6 bg-white bg-opacity-80 shadow-lg rounded-b-3xl fade-in relative">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Umi Logo" class="h-10 w-10 rounded-full shadow-md" />
+        <span class="text-2xl font-bold tracking-tight">Umi</span>
+      </div>
+      <!-- Hamburger for mobile -->
+      <button id="nav-toggle" class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Open navigation">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Nav links -->
+      <nav id="nav-menu" class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg font-medium absolute md:static top-full left-0 w-full md:w-auto bg-white bg-opacity-95 md:bg-transparent shadow-lg md:shadow-none rounded-b-2xl md:rounded-none px-8 py-4 md:p-0 z-20 transition-all duration-300 ease-in-out hidden md:flex">
+        <a href="index.html" class="border border-blue-200 rounded-lg px-4 py-2 transition-all duration-200 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Home</a>
+        <a href="#" class="border border-blue-200 rounded-lg px-4 py-2 transition-all duration-200 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700 text-blue-600 font-semibold">All Works</a>
+        <a href="index.html#about" class="border border-blue-200 rounded-lg px-4 py-2 transition-all duration-200 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">About</a>
+        <a href="index.html#contact" class="border border-blue-200 rounded-lg px-4 py-2 transition-all duration-200 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Works List Section -->
+    <section class="max-w-6xl mx-auto px-6 py-16 fade-in">
+      <h1 class="text-4xl font-bold mb-10 text-center">All Works</h1>
+      <div id="works-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Images will be rendered here by JS -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-500 text-sm fade-in">
+      &copy; 2024 Umi. All rights reserved.
+      <br />
+      <a href="add_work.html" class="text-blue-400 hover:text-blue-600 underline text-xs">Admin: Add Work</a>
+    </footer>
+    <script src="works_db.js"></script>
+    <script>
+      function renderImages() {
+        const images = window.umiWorksDB.getImages();
+        const grid = document.getElementById('works-grid');
+        grid.innerHTML = images.map(url => `
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+            <img src="${url}" alt="Work" class="w-full h-56 object-cover" />
+          </div>
+        `).join('');
+      }
+      renderImages();
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html> 
