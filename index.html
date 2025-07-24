@@ -1,55 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Umi Portfolio | Modern Designer Portfolio</title>
-  <meta name="description" content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences. Explore selected works, about, and contact info." />
-  <meta name="keywords" content="Umi, designer, portfolio, UI, UX, web design, graphic design, digital art, modern, creative" />
+  <meta name="description"
+    content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences. Explore selected works, about, and contact info." />
+  <meta name="keywords"
+    content="Umi, designer, portfolio, UI, UX, web design, graphic design, digital art, modern, creative" />
   <meta name="author" content="Umi" />
   <link rel="canonical" href="https://yourdomain.com/" />
   <meta property="og:title" content="Umi Portfolio | Modern Designer Portfolio" />
-  <meta property="og:description" content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences. Explore selected works, about, and contact info." />
+  <meta property="og:description"
+    content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences. Explore selected works, about, and contact info." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yourdomain.com/" />
   <meta property="og:image" content="https://yourdomain.com/assets/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Umi Portfolio | Modern Designer Portfolio" />
-  <meta name="twitter:description" content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences." />
+  <meta name="twitter:description"
+    content="Umi is a passionate designer crafting beautiful, functional, and modern digital experiences." />
   <meta name="twitter:image" content="https://yourdomain.com/assets/logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
   <style>
-    .fade-in { animation: fadeIn 1.2s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+    .fade-in {
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
+
 <body class="bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen font-sans text-gray-900">
 
   <!-- Header -->
-  <header class="flex items-center justify-between px-8 py-6 bg-white bg-opacity-80 shadow-lg rounded-b-3xl fade-in relative">
+  <header
+    class="flex items-center justify-between px-8 py-6 bg-white bg-opacity-80 shadow-lg rounded-b-3xl fade-in relative">
     <div class="flex items-center gap-3">
       <img src="assets/logo.png" alt="Umi Logo" class="h-10 w-10 rounded-full shadow-md" />
       <span class="text-2xl font-bold tracking-tight">Umi</span>
     </div>
-    <button id="nav-toggle" class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Open navigation">
+    <button id="nav-toggle" class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+      aria-label="Open navigation">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-    <nav id="nav-menu" class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg font-medium absolute md:static top-full left-0 w-full md:w-auto bg-white bg-opacity-95 md:bg-transparent shadow-lg md:shadow-none rounded-b-2xl md:rounded-none px-8 py-4 md:p-0 z-20 transition-all duration-300 ease-in-out hidden md:flex">
-      <a href="works.html" class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Works</a>
+    <nav id="nav-menu"
+      class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg font-medium absolute md:static top-full left-0 w-full md:w-auto bg-white bg-opacity-95 md:bg-transparent shadow-lg md:shadow-none rounded-b-2xl md:rounded-none px-8 py-4 md:p-0 z-20 transition-all duration-300 ease-in-out hidden md:flex">
+      <a href="works.html"
+        class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Works</a>
       <!-- <a href="#works" class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Works</a> -->
-      <a href="#about" class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">About</a>
-      <a href="#contact" class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Contact</a>
+      <a href="#about"
+        class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">About</a>
+      <a href="#contact"
+        class="border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="flex flex-col items-center justify-center text-center py-24 fade-in">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-purple-500 via-blue-700 to-pink-400 bg-clip-text text-transparent">Hi, I'm Umi</h1>
-    <p class="text-xl md:text-2xl max-w-2xl mb-8 text-gray-700">A passionate designer crafting beautiful, functional, and modern digital experiences.</p>
-    <a href="#works" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105">View My Work</a>
+    <h1
+      class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-purple-500 via-blue-700 to-pink-400 bg-clip-text text-transparent">
+      Hi, I'm Umi</h1>
+    <p class="text-xl md:text-2xl max-w-2xl mb-8 text-gray-700">A passionate designer crafting beautiful, functional,
+      and modern digital experiences.</p>
+    <a href="#works"
+      class="inline-block px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105">View
+      My Work</a>
   </section>
 
   <!-- Sample Works Section (Dynamic) -->
@@ -59,23 +89,30 @@
       <!-- Works will load here -->
     </div>
     <div class="text-center mt-8">
-      <a href="works.html" class="inline-block px-6 py-3 bg-gray-800 text-white rounded-full shadow hover:bg-gray-900 transition">View All Works</a>
+      <a href="works.html"
+        class="inline-block px-6 py-3 bg-gray-800 text-white rounded-full shadow hover:bg-gray-900 transition">View All
+        Works</a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="max-w-4xl mx-auto px-6 py-16 fade-in">
     <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-    <p class="text-lg text-gray-700 text-center">I'm a multidisciplinary designer with a love for clean, modern aesthetics and intuitive user experiences. My work blends creativity with strategy to deliver impactful results for clients and users alike.</p>
+    <p class="text-lg text-gray-700 text-center">I'm a multidisciplinary designer with a love for clean, modern
+      aesthetics and intuitive user experiences. My work blends creativity with strategy to deliver impactful results
+      for clients and users alike.</p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="max-w-2xl mx-auto px-6 py-16 fade-in">
     <h2 class="text-3xl font-bold mb-6 text-center">Send Email</h2>
     <div class="flex flex-col items-center">
-      <a href="mailto:mastikanabila@gmail.com" class="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105 text-lg font-semibold">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.876 1.797l-7.5 5.625a2.25 2.25 0 01-2.748 0l-7.5-5.625A2.25 2.25 0 012.25 6.993V6.75" />
+      <a href="mailto:mastikanabila@gmail.com"
+        class="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105 text-lg font-semibold">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.876 1.797l-7.5 5.625a2.25 2.25 0 01-2.748 0l-7.5-5.625A2.25 2.25 0 012.25 6.993V6.75" />
         </svg>
         Send Email to mastikanabila@gmail.com
       </a>
@@ -87,64 +124,94 @@
     &copy; 2025 Umi. All rights reserved.
   </footer>
 
-  <script>
-    const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxS7kiRy8JLx-L3ABbTHmiivn-hPOfOPvzjem7ZYJ_wlXouDh5DP3djBPQVIMYzPRoURFAxGuTs3kO/pub?output=csv";
-    const CORS_PROXY = "https://api.allorigins.win/raw?url=";
+<script>
+  const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxS7kiRy8JLx-L3ABbTHmiivn-hPOfOPvzjem7ZYJ_wlXouDh5DP3djBPQVIMYzPRoURFAxGuTs3kO/pub?output=csv";
+  const CORS_PROXY = "https://api.allorigins.win/raw?url="; // Faster than AllOrigins
+  let allWorks = [];
+  let currentCategory = "All";
 
-    async function fetchCSV(url) {
-      const res = await fetch(CORS_PROXY + encodeURIComponent(url));
-      const text = await res.text();
-      const rows = text.split("\n").map(r => r.split(",").map(c => c.trim()));
-      rows.shift(); // remove headers
-      return rows.map(row => ({
-        title: row[0] || "",
-        description: row[1] || "",
-        url: row[2] || "#",
-        image: row[3] || "",
-        priority: parseInt(row[4]) || 999,
-        category: row[5] || "Uncategorized"
-      }));
-    }
+  async function fetchCSV(url) {
+    const res = await fetch(CORS_PROXY + encodeURIComponent(url));
+    const text = await res.text();
+    const rows = text.split("\n").map(r => r.split(",").map(c => c.trim()));
+    rows.shift(); // remove headers
 
-    function getFirstThreeUniqueCategories(works) {
-      const selected = [];
-      const seen = new Set();
-      for (let w of works) {
-        if (!seen.has(w.category)) {
-          selected.push(w);
-          seen.add(w.category);
-        }
-        if (selected.length === 3) break;
+    function getMediaUrl(row5, row4) {
+      const placeholder = "assets/placeholder.png";
+      let link = row5 || row4 || "";
+      if (!link) return { type: "image", src: placeholder };
+
+      // Detect if it's a Google Drive file
+      const match = link.match(/[-\w]{25,}/);
+      if (link.includes("drive.google.com") && match) {
+        return { type: "iframe", src: `https://drive.google.com/file/d/${match[0]}/preview` };
       }
-      return selected;
+      return { type: "image", src: link };
     }
 
-    function renderWorks(works) {
-      document.getElementById("works-grid").innerHTML = works.map(work => `
+    return rows
+      .filter(row => row.length > 1)
+      .map(row => {
+        const media = getMediaUrl(row[5], row[4]);
+        return {
+          title: row[1] || "",
+          description: row[2] || "",
+          url: row[3] || "#",
+          mediaType: media.type,
+          mediaSrc: media.src,
+          priority: parseInt(row[6]) || 999,
+          category: row[7] || "Uncategorized"
+        };
+      });
+  }
+
+  function getFirstThreeUniqueCategories(works) {
+    const selected = [];
+    const seen = new Set();
+    for (let w of works) {
+      if (!seen.has(w.category)) {
+        selected.push(w);
+        seen.add(w.category);
+      }
+      if (selected.length === 3) break;
+    }
+    return selected;
+  }
+
+  function renderWorks(works) {
+    document.getElementById("works-grid").innerHTML = works.map(work => {
+      const mediaElement = work.mediaType === "iframe"
+        ? `<iframe src="${work.mediaSrc}" class="w-full h-56" style="border:0;" allow="autoplay"></iframe>`
+        : `<img src="${work.mediaSrc}" alt="${work.title}" class="w-full h-56 object-cover" />`;
+
+      return `
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
           <a href="${work.url}" target="_blank">
-            <img src="${work.image}" alt="${work.title}" class="w-full h-56 object-cover" />
+            ${mediaElement}
           </a>
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2">${work.title}</h3>
             <p class="text-gray-600">${work.description}</p>
           </div>
         </div>
-      `).join('');
-    }
+      `;
+    }).join('');
+  }
 
-    async function init() {
-      let works = await fetchCSV(SHEET_URL);
-      works.sort((a, b) => a.priority - b.priority);
-      const selectedWorks = getFirstThreeUniqueCategories(works);
-      renderWorks(selectedWorks);
-    }
+  async function init() {
+    let works = await fetchCSV(SHEET_URL);
+    works.sort((a, b) => a.priority - b.priority);
+    const selectedWorks = getFirstThreeUniqueCategories(works);
+    renderWorks(selectedWorks);
+  }
 
-    init();
+  init();
 
-    document.getElementById('nav-toggle').addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.toggle('hidden');
-    });
-  </script>
+  document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.toggle('hidden');
+  });
+</script>
+
 </body>
+
 </html>
